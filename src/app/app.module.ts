@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SevastopolComponent } from './pages/sevastopol/sevastopol.component';
+import { CrimeaComponent } from './pages/crimea/crimea.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SevastopolComponent,
+    CrimeaComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

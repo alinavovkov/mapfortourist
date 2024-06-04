@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './app/styles/variables';
+@use './app/styles/fonts';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: variables.$color-light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: variables.$color-dark;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: variables.$color-accent;
+}
