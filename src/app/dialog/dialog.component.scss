@@ -1,0 +1,33 @@
+@use '../../app/styles/variables';
+@use '../../app/styles/fonts';
+
+h2 {
+    margin: 20px;
+    color: variables.$color-dark;
+    font-family: variables.$font-accent;
+
+}
+
+button {
+    width: 70px;
+    margin-left: 10px;
+    border: 1px solid variables.$color-dark;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: variables.$color-dark;
+    font-family: variables.$font-main;
+    transition: 1s;
+}
+
+button:hover {
+    border: none;
+    color: variables.$color-accent;
+}
+
+.content{
+    color: variables.$color-dark;
+    font-family: variables.$font-main;
+}
+

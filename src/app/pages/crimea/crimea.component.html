@@ -1,45 +1,66 @@
 <div class="full-content">
     <div class="main">
         <div class="map-link">
-            <a  [routerLink]="[ '' ]" >карта</a>
+            <a [routerLink]="[ '' ]">карта</a>
         </div>
         <span>КРИМ</span>
-        <p>сіфршогршіврг фсіоираш крим</p>
+        <p>півострів на півдні України, відомий своїми історичними містами, курортами на узбережжі Чорного моря</p>
     </div>
     <div class="content">
         <div class="image-block">
-            <section class="container">
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img id="slide-1" src="../../../assets/images/crimea/botanical_garden.jpg" alt="">
-                        <img id="slide-2" src="../../../assets/images/crimea/bay_Balaklava.jpg" alt="">
-                        <img id="slide-3" src="../../../assets/images/crimea/masandra_palace.jpg" alt="">
-                        <img id="slide-4" src="../../../assets/images/crimea/palace.jpg" alt="">
-                        <img id="slide-5" src="../../../assets/images/crimea/Swallows.jpg" alt="">
-                    </div>
-                    <div class="slider-nav">
-                        <a href="/crimea/#slide-1"></a>
-                        <a href="/crimea/#slide-2"></a>
-                        <a href="/crimea/#slide-3"></a>
-                        <a href="/crimea/#slide-4"></a>
-                        <a href="/crimea/#slide-5"></a>
-                    </div>
-                </div>
-            </section>
 
+            <img id="slide-2" src="../../../assets/images/crimea/bay_Balaklava.jpg" alt="">
         </div>
         <div class="text-block">
             <h2>Бухта в Балаклаві</h2>
-            <p>Кримське містечко Балаклава прикрашає стародавня бухта, здавна радує око подорожуючих, а також захищає
+            <p>Кримське містечко Балаклава прикрашає стародавня бухта, здавна радує око подорожуючих, а також
+                захищає
                 від набігів ворогів. Балаклавська бухта — одна з бухт, розташованих в межах «Великого Севастополя».
-                Неподалік від бухти розташована старовинна фортеця Чембало. Бухта, оточена горами, які закривають
-                містечко від вітру і шторму.</p>
+                <br>Неподалік від бухти розташована старовинна фортеця Чембало.
+            </p>
+            <span>Бухта, оточена горами, які закривають
+                містечко від вітру і шторму.</span>
+            <a href="https://maps.app.goo.gl/S9LkWGtvoWm9xSVu6" target="_blank">на мапі</a>
+
         </div>
+        <h2 class="place-number ">01</h2>
     </div>
     <div class="content">
+        <h2 class="place-number">02</h2>
 
-        <img id="slide-1" src="../../../assets/images/crimea/botanical_garden.jpg" alt="">
+        <div class="info-gallery">
 
-        <div class="text-block"></div>
+            <h2>Нікітський ботанічний сад</h2>
+
+            <p>Найкрасивіші місця відпочинку в Криму були б не настільки цікаві без Нікітського ботанічного саду. Він
+                заснований у 1812 році і є однією з найстаріших науково-дослідних установ України. Засновник Саду -
+                видатний вчений-біолог XIX століття Христиан Христианович Стевен.
+            </p>
+            <span>Унікальний зелений оазис Криму</span>
+            <a href="https://maps.app.goo.gl/vwDBWTTQc738z6gX8" target="_blank">на мапі</a>
+
+        </div>
+        <div class="gallery-block">
+            <img src="../../../assets/images/crimea/bay_Balaklava.jpg" alt="" id="main" [src]="mainImage">
+            <div id="thumbnails">
+                <img *ngFor="let image of images" [src]="image" (click)="onImageClick(image)">
+            </div>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="image-block">
+            <img src="../../../assets/images/crimea/Swallows.jpg" alt="">
+        </div>
+        <div class="text-block">
+            <h2>Ластівчине гніздо</h2>
+            <p>Один з найпрекрасніших куточків нашої країни є гордістю Криму. Архітектура будівлі, розташованої на
+                високій скелі, нагадує стародавні замки. Біля підніжжя знаходяться бухта і причал. На даний момент в
+                будові знаходиться один з кращих ресторанів з відповідною назвою «Ластівчине гніздо».
+            </p>
+            <span>Ластівчине гніздо — це величний неоготичний замок на скелі, який відкриває приголомшливі види на Чорне море, що неодмінно вразять Вас</span>
+            <a href="https://maps.app.goo.gl/4ARE55WvH9HCRPHH9" target="_blank">на мапі</a>
+        </div>
+        <h2 class="place-number">03</h2>
     </div>
 </div>

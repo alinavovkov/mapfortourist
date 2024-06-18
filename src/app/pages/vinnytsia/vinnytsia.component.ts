@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-crimea',
-  templateUrl: './crimea.component.html',
-  styleUrl: './crimea.component.scss'
+  selector: 'app-vinnytsia',
+  templateUrl: './vinnytsia.component.html',
+  styleUrl: './vinnytsia.component.scss'
 })
-export class CrimeaComponent {
+export class VinnytsiaComponent implements OnInit {
+  constructor(private renderer: Renderer2) { }
+
   mainImage: string = '../../../assets/images/crimea/botanical_garden.jpg';
   images: string[] = [
 '../../../assets/images/crimea/botanical_garden.jpg',
@@ -17,5 +19,7 @@ export class CrimeaComponent {
   onImageClick(image: string): void {
     this.mainImage = image;
   }
-
+  ngOnInit(): void {
+   
+  }
 }
