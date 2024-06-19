@@ -19,6 +19,7 @@ button {
     color: variables.$color-dark;
     font-family: variables.$font-main;
     transition: 1s;
+    cursor: pointer;
 }
 
 button:hover {

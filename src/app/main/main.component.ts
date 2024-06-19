@@ -1,9 +1,7 @@
 import { Component, ElementRef, ViewChild, HostListener, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { CityService } from '../services/city.service';
-import {
-  MatDialog,
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
 
@@ -11,23 +9,24 @@ import { DialogComponent } from '../dialog/dialog.component';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainComponent implements OnInit {
   cities: any[];
   constructor(
     private cityService: CityService,
-    private router: Router,
-    private dialog: MatDialog // Inject MatDialog here
-
+    private dialog: MatDialog
   ) {
     this.cities = this.cityService.getCities();
   }
-
+  ngOnInit(): void {
+    console.log(this.cities);
+    
+  }
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(DialogComponent, {
       width: '550px',
-      data: { enterAnimationDuration, exitAnimationDuration }, // Pass data if necessary
+      data: { enterAnimationDuration, exitAnimationDuration },
     });
   }
   handleCityClick(cityId: string): void {
@@ -43,8 +42,5 @@ export class MainComponent implements OnInit {
 
   toggleCityVisited(cityId: string): void {
     this.cityService.toggleCityVisited(cityId);
-  }
-  
-  ngOnInit(): void {
   }
 }
