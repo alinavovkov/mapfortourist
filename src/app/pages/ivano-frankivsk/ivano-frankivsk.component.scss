@@ -1,0 +1,76 @@
+@use '../../../app/styles/variables';
+@use '../../../app/styles/fonts';
+
+.full-content {
+    width: 100%;
+    background-color: variables.$color-dark;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-link-container {
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.map-link {
+    margin: 20px;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: variables.$color-light;
+    transition: 250ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 1.5rem 3rem -0.75rem variables.$color-light;
+
+    a {
+        display: none;
+    }
+}
+
+.map-link:hover {
+    font-family: variables.$font-main;
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: variables.$color-light;
+
+    a {
+        display: flex;
+        color: variables.$color-dark;
+        text-decoration: none;
+    }
+}
+
+.pageInProcess {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: variables.$font-accent;
+    font-size: 55px;
+    color: variables.$color-light;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
